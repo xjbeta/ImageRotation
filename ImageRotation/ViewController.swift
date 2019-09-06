@@ -10,10 +10,39 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var imageView: NSImageView!
+    
+    @IBAction func rotate(_ sender: Any) {
+        imageView.rotate()
+    }
+    
+    @IBAction func resume(_ sender: Any) {
+        imageView.resumeAnimation()
+    }
+    
+    @IBAction func pause(_ sender: Any) {
+        imageView.pauseAnimation()
+    }
+    
+    @IBAction func removeAll(_ sender: Any) {
+        imageView.layer?.removeAllAnimations()
+    }
+    
+    @IBAction func setAnchorPoint(_ sender: Any) {
+        imageView.setAnchorPoint(anchorPoint: .init(x: 0.5, y: 0.5))
+    }
+    
+    var oo: NSKeyValueObservation?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        oo = view.observe(\.frame, options: [.initial, .new]) { (view, changes) in
+            print(changes)
+            self.imageView.setAnchorPoint(anchorPoint: .init(x: 0.5, y: 0.5))
+            
+        }
+        
     }
 
     override var representedObject: Any? {
@@ -22,6 +51,6 @@ class ViewController: NSViewController {
         }
     }
 
-
+    
 }
 

@@ -11,6 +11,7 @@
 		0133AC83232216DC00090D5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0133AC82232216DC00090D5E /* ViewController.swift */; };
 		0133AC85232216DD00090D5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0133AC84232216DD00090D5E /* Assets.xcassets */; };
 		0133AC88232216DD00090D5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0133AC86232216DD00090D5E /* Main.storyboard */; };
+		0133AC912322183100090D5E /* ViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0133AC902322183100090D5E /* ViewAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		0133AC87232216DD00090D5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0133AC89232216DD00090D5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0133AC8A232216DD00090D5E /* ImageRotation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ImageRotation.entitlements; sourceTree = "<group>"; };
+		0133AC902322183100090D5E /* ViewAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				0133AC86232216DD00090D5E /* Main.storyboard */,
 				0133AC89232216DD00090D5E /* Info.plist */,
 				0133AC8A232216DD00090D5E /* ImageRotation.entitlements */,
+				0133AC902322183100090D5E /* ViewAnimation.swift */,
 			);
 			path = ImageRotation;
 			sourceTree = "<group>";
@@ -133,6 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0133AC912322183100090D5E /* ViewAnimation.swift in Sources */,
 				0133AC83232216DC00090D5E /* ViewController.swift in Sources */,
 				0133AC81232216DC00090D5E /* AppDelegate.swift in Sources */,
 			);
@@ -272,8 +276,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ImageRotation/ImageRotation.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ImageRotation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -281,6 +286,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xjbeta.ImageRotation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -290,8 +296,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ImageRotation/ImageRotation.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ImageRotation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -299,6 +306,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xjbeta.ImageRotation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
