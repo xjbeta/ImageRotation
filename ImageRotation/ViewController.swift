@@ -39,6 +39,8 @@ class ViewController: NSViewController {
         
         oo = view.observe(\.frame, options: [.initial, .new]) { (view, changes) in
             print(changes)
+            // Update AnchorPoint when window resize.
+            // fix rotate around the 0, 0 after window resize.
             self.imageView.setAnchorPoint(anchorPoint: .init(x: 0.5, y: 0.5))
             
         }
