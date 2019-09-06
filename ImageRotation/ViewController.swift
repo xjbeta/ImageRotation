@@ -51,6 +51,9 @@ class ViewController: NSViewController {
         }
     }
 
+    deinit {
+        oo?.invalidate()
+    }
     
 }
 
